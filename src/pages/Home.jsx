@@ -1,19 +1,20 @@
-import { Col, Container, Row } from "react-bootstrap"
-
+import { Col, Container, Row } from "react-bootstrap";
+import InfoProfiloHome from "../components/InfoProfiloHome";
 
 function Home() {
-
-    return (
-        <>
-            <Container>
-                <Row>
-
-                    <h1>LinkedIn</h1>
-                    <Col></Col>
-                </Row>
-            </Container>
-        </>
-    )
+  return (
+    <>
+      <Container>
+        <Row>
+          <Col md={2}>
+            <InfoProfiloHome />
+          </Col>
+          <Col md={7}></Col>
+          <Col md={3}></Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
-export default Home
+export default Home;
