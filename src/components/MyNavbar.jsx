@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 import logoLinkedin from "../assets/logo/logoLinkedin.png";
@@ -6,9 +6,10 @@ import logoLinkedin from "../assets/logo/logoLinkedin.png";
 function MyNavbar() {
   return (
     <>
-      <Navbar>
-        <Container>
-          <Navbar.Brand as={NavLink} to="/">
+      <Navbar bg="white" className="shadow-sm mb-4">
+        <Container className="align-items-center">
+          {/* LOGO */}
+          <Navbar.Brand as={NavLink} to="/" className="me-2">
             <img
               src={logoLinkedin}
               alt="Logo LinkedIn"
@@ -17,7 +18,18 @@ function MyNavbar() {
             />
           </Navbar.Brand>
 
-          <Nav className="me-auto">
+          {/* SEARCHBAR */}
+          <Form className="me-auto d-none d-md-block" style={{ width: "200px" }}>
+            <Form.Control
+              type="search"
+              placeholder="Cerca"
+              className="rounded-pill"
+              aria-label="Cerca"
+            />
+          </Form>
+
+          {/* NAV ICONS */}
+          <Nav className="d-flex">
             {/* HOME */}
             <Nav.Link
               as={NavLink}

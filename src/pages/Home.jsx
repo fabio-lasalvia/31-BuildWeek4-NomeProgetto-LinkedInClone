@@ -7,10 +7,10 @@ function Home() {
     <>
       <Container>
         <Row>
-          <Col md={2}>
+          <Col md={3}>
             <InfoProfiloHome />
           </Col>
-          <Col md={7}>
+          <Col md={6}>
             <MainHome />
           </Col>
           <Col md={3}></Col>
